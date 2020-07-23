@@ -13,6 +13,7 @@ while True:
 for f in products:
 	print(f[0], '的價錢是', f[1], '元')
 
-with open('products2.csv', 'w') as f:
+with open('products2.csv', 'w', encoding = 'utf-8') as f:
+	f.write('商品名稱,商品價格\n')
 	for p in products:
-		f.write(p[0] + ',' + p[1])
+		f.write(p[0] + ',' + p[1] + '\n')

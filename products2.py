@@ -9,5 +9,10 @@ while True:
 	#p.append(price)
 	#p = [name, price]
 	products.append([name, price])
-for p in products:
-	print(p[0], '的價格是', p[1], '元'）
+
+for f in products:
+	print(f[0], '的價錢是', f[1], '元')
+
+with open('products2.csv', 'w') as f:
+	for p in products:
+		f.write(p[0] + ',' + p[1])
